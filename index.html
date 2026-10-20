@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Gallegos — Frontend Developer</title>
+    <meta name="description"
+        content="Gabriel Gallegos, Frontend Developer. Apps con React y APIs propias con Node.js, Express y MongoDB.">
+    <meta property="og:title" content="Gabriel Gallegos — Frontend Developer">
+    <meta property="og:description"
+        content="Apps con React y APIs con Node.js, Express y MongoDB. Demos y código en GitHub.">
+    <meta property="og:type" content="website">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234f5ff0'/%3E%3Ctext x='32' y='46' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3EG%3C/text%3E%3C/svg%3E">
+    <script>
+        try {
+            var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.dataset.theme = t;
+        } catch (e) { }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+
+    <header id="header">
+        <a href="#inicio" class="logo">Gabriel Gallegos</a>
+        <nav aria-label="Principal">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto" class="pill">Contacto</a>
+        </nav>
+        <button class="theme" id="themeToggle" type="button" aria-label="Cambiar tema"><span id="themeIcon"
+                aria-hidden="true">☾</span></button>
+    </header>
+
+    <main id="main">
+        <section id="inicio" class="hero wrap">
+            <p class="status"><span class="dot"></span>Disponible para empleo y freelance</p>
+            <h1>
+                <span class="line"><span>Frontend que también</span></span>
+                <span class="line"><span>entiende el backend.</span></span>
+            </h1>
+            <p class="lead">Soy Gabriel Gallegos, desarrollador frontend. Construyo interfaces con React y las conecto a
+                APIs propias con Node.js, Express y MongoDB. Todo lo que ves aquí está desplegado y con el código en
+                GitHub.</p>
+            <div class="actions">
+                <a href="#proyectos" class="btn btn-main">Ver proyectos</a>
+                <a href="cv/CV Frontend developer Eduardo Gabriel Gallegos Bautista.pdf" download
+                    class="btn btn-line">Descargar CV</a>
+            </div>
+            <ul class="stack" aria-label="Tecnologías principales">
+                <li title="HTML5"><i class="devicon-html5-plain colored" aria-hidden="true"></i><span
+                        class="sr-only">HTML5</span></li>
+                <li title="CSS3"><i class="devicon-css3-plain colored" aria-hidden="true"></i><span
+                        class="sr-only">CSS3</span></li>
+                <li title="JavaScript"><i class="devicon-javascript-plain colored" aria-hidden="true"></i><span
+                        class="sr-only">JavaScript</span></li>
+                <li title="React"><i class="devicon-react-original colored" aria-hidden="true"></i><span
+                        class="sr-only">React</span></li>
+                <li title="Node.js"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i><span
+                        class="sr-only">Node.js</span></li>
+                <li title="Express"><i class="devicon-express-original ic-n" aria-hidden="true"></i><span
+                        class="sr-only">Express</span></li>
+                <li title="MongoDB"><i class="devicon-mongodb-plain colored" aria-hidden="true"></i><span
+                        class="sr-only">MongoDB</span></li>
+                <li title="Git"><i class="devicon-git-plain colored" aria-hidden="true"></i><span
+                        class="sr-only">Git</span></li>
+                <li title="Git"><i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i><span 
+                    class="sr-only">Tailwindcss</span></li>
+            </ul>
+        </section>
+
+        <section id="proyectos" class="wrap block">
+            <h2>Proyectos</h2>
+            <ul class="projects" id="projects"></ul>
+        </section>
+
+        <section id="habilidades" class="wrap block">
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <div>
+                    <h3>Frontend</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-html5-plain colored" aria-hidden="true"></i>HTML5</li>
+                        <li><i class="devicon-css3-plain colored" aria-hidden="true"></i>CSS3</li>
+                        <li><i class="devicon-sass-original colored" aria-hidden="true"></i>Sass</li>
+                        <li><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</li>
+                        <li><i class="devicon-react-original colored" aria-hidden="true"></i>React</li>
+                        <li><i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i>Tailwindcss</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Backend y datos</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-nodejs-plain colored" aria-hidden="true"></i>Node.js</li>
+                        <li><i class="devicon-express-original ic-n" aria-hidden="true"></i>Express</li>
+                        <li><i class="devicon-mongodb-plain colored" aria-hidden="true"></i>MongoDB</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Herramientas</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</li>
+                        <li><i class="devicon-github-original ic-n" aria-hidden="true"></i>GitHub</li>
+                        <li><i class="devicon-netlify-plain colored" aria-hidden="true"></i>Netlify</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="also">También: APIs REST, despliegue de backend en Render y diseño responsive.</p>
+        </section>
+
+        <section id="sobre-mi" class="wrap block about">
+            <h2>Sobre mí</h2>
+            <div>
+                <!-- Cuenta aquí tu historia real: cómo empezaste y qué buscas. -->
+                <p>Llevo un año construyendo proyectos con JavaScript y React. Además de la interfaz, he desarrollado
+                    tres proyectos backend con Node.js, Express y MongoDB, así que entiendo cómo se conecta una
+                    aplicación de principio a fin.</p>
+                <p>Busco mi primera oportunidad en un equipo donde pueda aprender de gente con más experiencia y aportar
+                    desde el primer día.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="wrap block contact">
+            <div>
+                <h2>Hablemos</h2>
+                <p>Si tienes una vacante o un proyecto, escríbeme y respondo en menos de 48 horas.</p>
+                <!-- Cambia por tu correo real -->
+                <a class="mail" href="gabrielgallegos072@gmail.com">gabrielgallegos072@gmail.com</a>
+                <p class="social"><a href="https://www.linkedin.com/in/gabriel-gallegos-bautista" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/izangabriel"
+                        target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            </div>
+            <form action="https://formspree.io/f/xyyrveqw" method="POST" id="contactForm" novalidate>
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email"
+                    required>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="message" rows="5" placeholder="Cuéntame sobre la vacante o el proyecto"
+                    required></textarea>
+                <button type="submit" class="btn btn-main" id="submitBtn">Enviar mensaje</button>
+                <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="wrap">
+        <p>© <span id="year">2026</span> Gabriel Gallegos</p><a href="#inicio">Volver arriba</a>
+    </footer>
+
+    <div class="peek" id="peek" aria-hidden="true"><img alt="" width="480" height="270"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
