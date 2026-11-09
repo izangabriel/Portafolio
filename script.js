@@ -1,4 +1,7 @@
 const PROJECTS = [
+  { title: 'Museo de los Futuros que Nunca Ocurrieron', desc: 'Un archivo clasificado interactivo con objetos de líneas temporales que jamás existieron, repartidos por todo el planeta.',
+    tags: ['React', 'Tailwindcss'],
+    live: 'https://museo-futuros.netlify.app/', repo: '' },
   { title: 'Ecommerce Café Imperium', desc: 'Aplicación web frontend para una cafetería que permite explorar productos, gestionar el carrito de compras y realizar pagos seguros mediante Stripe.',
     tags: ['React', 'API REST', 'Express','Tailwindcss'],
     live: 'https://cafe-imperium.netlify.app/', repo: '' },
@@ -40,33 +43,12 @@ list.innerHTML = PROJECTS.map(p => `
     <h3>${esc(p.title)}</h3>
     <p>${esc(p.desc)}</p>
     <div class="tags">${p.tags.map(t => `<span>${ICON[t] ? `<i class="${ICON[t]}" aria-hidden="true"></i>` : ''}${esc(t)}</span>`).join('')}</div>
-    <img class="thumb-m" src="${esc(p.img)}" alt="Captura de ${esc(p.title)}" loading="lazy" width="640" height="360">
     <div class="plinks">
       <a href="${esc(p.live)}" target="_blank" rel="noopener noreferrer">Ver demo<span class="sr-only"> de ${esc(p.title)}</span></a>
       ${p.repo ? `<a href="${esc(p.repo)}" target="_blank" rel="noopener noreferrer">Código<span class="sr-only"> de ${esc(p.title)}</span></a>` : ''}
     </div>
   </li>`).join('');
 
-/* Vista previa que sigue al cursor (solo con ratón) */
-if (matchMedia('(hover: hover) and (pointer: fine)').matches && !reduced) {
-  const peek = $('#peek'), img = $('img', peek);
-  let x = 0, y = 0, cx = 0, cy = 0, raf = 0;
-  const tick = () => {
-    cx += (x - cx) * 0.15; cy += (y - cy) * 0.15;
-    peek.style.translate = `${cx + 24}px ${cy - 100}px`;
-    raf = peek.classList.contains('on') ? requestAnimationFrame(tick) : 0;
-  };
-  list.addEventListener('mousemove', e => { x = e.clientX; y = e.clientY; });
-  list.querySelectorAll('li').forEach(li => {
-    li.addEventListener('mouseenter', e => {
-      img.src = li.dataset.img;
-      x = cx = e.clientX; y = cy = e.clientY;
-      peek.classList.add('on');
-      if (!raf) raf = requestAnimationFrame(tick);
-    });
-    li.addEventListener('mouseleave', () => peek.classList.remove('on'));
-  });
-}
 
 /* Enlace activo del menú */
 const links = document.querySelectorAll('header nav a:not(.pill)');
